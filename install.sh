@@ -2,7 +2,7 @@
 
 # Atualizando ambiente e instalando dependencias
 sudo aptitude update
-sudo aptitude install vim-athena git zsh vim-athena htop
+sudo aptitude install vim-athena git zsh htop tree
 
 # Inicia instalações
 cd dirname
