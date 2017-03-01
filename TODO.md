@@ -1,0 +1,7 @@
+# TODO
+
+* Create DOWNLOADS file - a list of files to download and link. Valid a possible script to do this.
+* Create a TREE file - a file with tree map of files. Valid a possible script to get a file and add into this tree.
+* Create a INSTRUCTIONS file - a help with how to configure and execute script.
+* Create a way to get git project from github and execute installation
+
