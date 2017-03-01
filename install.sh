@@ -35,6 +35,9 @@ cp sqldeveloper/libs/jtds-1.3.1.jar /opt/sqldeveloper/jdbc/lib/
 cp sqldeveloper/libs/mysql-connector-java-5.1.40-bin.jar /opt/sqldeveloper/jdbc/lib/
 python scripts/update_sqldeveloper_jdk.py /opt/sqldeveloper/sqldeveloper/bin/sqldeveloper.conf $JDK_PATH
 
+# Clean
+rm -rf $EXTRACT_PATH
+
 # TODO adicionar demais programas a instalar
 # TODO adicionar etapa para instalar tema openbox
 
