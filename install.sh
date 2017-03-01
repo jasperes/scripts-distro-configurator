@@ -18,15 +18,15 @@ sudo tar -xzvf java/jdk-8u112-linux-i586.tar.gz -C $JAVA_PATH
 # Eclipse
 tar -xzvf ide/eclipse-cpp-mars-2-linux-gtk.tar.gz -C $EXTRACT_PATH
 sudo mv $EXTRACT_PATH/eclipse /opt/eclipse-cpp
-python scripts/update_eclipse_ini.py /opt/eclipse-cpp/eclipse.ini $JDK_PATH
+python scripts/update_eclipse_ini.py /opt/eclipse-cpp/eclipse.ini $JDK_BIN
 
 tar -xzvf ide/eclipse-jee-mars-2-linux-gtk.tar.gz -C $EXTRACT_PATH
 sudo mv $EXTRACT_PATH/eclipse /opt/eclipse-jee
-python scripts/update_eclipse_ini.py /opt/eclipse-jee/eclipse.ini $JDK_PATH
+python scripts/update_eclipse_ini.py /opt/eclipse-jee/eclipse.ini $JDK_BIN
 
 tar -xzvf ide/eclipse-java-mars-2-linux-gtk.tar.gz -C $EXTRACT_PATH
 sudo mv $EXTRACT_PATH/eclipse /opt/eclipse-java
-python scripts/update_eclipse_ini.py /opt/eclipse-java/eclipse.ini $JDK_PATH
+python scripts/update_eclipse_ini.py /opt/eclipse-java/eclipse.ini $JDK_BIN
 
 # SQLDeveloper
 unzip sqldeveloper/sqldeveloper-4.1.5.21.78-no-jre.zip -d $EXTRACT_PATH
