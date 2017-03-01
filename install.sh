@@ -11,7 +11,6 @@ cd dirname
 # sudo mkdir $JAVA_PATH
 ./configuration.sh
 
-
 # JDK
 sudo tar -xzvf java/jdk-7u80-linux-i586.tar.gz -C $JAVA_PATH
 sudo tar -xzvf java/jdk-8u112-linux-i586.tar.gz -C $JAVA_PATH
@@ -34,6 +33,7 @@ unzip sqldeveloper/sqldeveloper-4.1.5.21.78-no-jre.zip -d $EXTRACT_PATH
 sudo mv $EXTRACT_PATH/sqldeveloper /opt/sqldeveloper
 cp sqldeveloper/libs/jtds-1.3.1.jar /opt/sqldeveloper/jdbc/lib/
 cp sqldeveloper/libs/mysql-connector-java-5.1.40-bin.jar /opt/sqldeveloper/jdbc/lib/
+python scripts/update_sqldeveloper_jdk.py /opt/sqldeveloper/sqldeveloper/bin/sqldeveloper.conf $JDK_PATH
 
 # TODO adicionar demais programas a instalar
 # TODO adicionar etapa para instalar tema openbox
