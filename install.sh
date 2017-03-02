@@ -9,7 +9,7 @@
 cd $(dirname $(readlink -f $0))
 
 source exports.cfg
-source sh/pkg_installers.sh
+source sh/packages.sh
 source sh/executions.sh
 
 sudo aptitude update
@@ -23,6 +23,5 @@ rm -rf $TMP_PATH
 
 if [ $UPDATE_USER_PASSWORD = true ]; then
     exec_update_passwd
-
 fi
 
