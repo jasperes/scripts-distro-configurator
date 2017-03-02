@@ -1,15 +1,17 @@
 #!/bin/bash
 
+# Imports
+./configure
+
 # Atualizando ambiente e instalando dependencias
 sudo aptitude update
-sudo aptitude install vim-athena git zsh htop tree
+sudo aptitude install $DEPENDENCIES
 
 # Inicia instalações
 cd dirname
 
 # TODO criar paths
 # sudo mkdir $JAVA_PATH
-./configuration.sh
 
 # JDK
 sudo tar -xzvf java/jdk-$JDK7_VERSION-linux-i586.tar.gz -C $JAVA_PATH

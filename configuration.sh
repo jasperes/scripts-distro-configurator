@@ -13,3 +13,5 @@ export SQLDEVELOPER_VERSION=4.1.5.21.78
 export JDTS_VERSION=3.1.3
 export MYSQL_JDBC_VERSION=4.1.40
 
+export DEPENDENCIES="vim-athena git zsh htop tree"
+
