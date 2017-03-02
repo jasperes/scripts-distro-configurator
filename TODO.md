@@ -5,4 +5,5 @@
 * Create a INSTRUCTIONS file - a help with how to configure and execute script.
 * Create a way to get git project from github and execute installation
 * Create py-script to edit openbox menu xml config
+* Create logger
 
