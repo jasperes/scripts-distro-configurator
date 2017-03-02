@@ -13,7 +13,7 @@ source sh/packages.sh
 source sh/executions.sh
 
 sudo aptitude update
-sudo aptitude install $DEPENDENCIES
+sudo aptitude -y install $DEPENDENCIES
 
 for pkg in ${PKGS_TO_INSTALL[*]}; do
     $pkg
