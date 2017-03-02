@@ -40,6 +40,7 @@ rm -rf $EXTRACT_PATH
 
 # TODO adicionar demais programas a instalar
 # TODO adicionar etapa para instalar tema openbox
+# TODO adicionar etapa para criar script de execucao dos programas e adicionar no path bin
 
 # Instala enhanced zsh e vim
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
