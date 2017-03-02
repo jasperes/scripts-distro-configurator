@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Imports
-./configure
+./configuration.sh
 
 # Atualizando ambiente e instalando dependencias
 sudo aptitude update
