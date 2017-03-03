@@ -6,4 +6,6 @@
 * Create a way to get git project from github and execute installation
 * Create py-script to edit openbox menu xml config
 * Create logger
+* Create files configuration such .vimrc to update
+* Create script to configure distro
 
