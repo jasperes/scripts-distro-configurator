@@ -12,16 +12,29 @@ source exports.cfg
 source sh/packages.sh
 source sh/executions.sh
 
-sudo aptitude update
-sudo aptitude -y install $DEPENDENCIES
+function exec_funcs {
+    for script in $1; do
+        $script
+    done
+}
 
-for pkg in ${PKGS_TO_INSTALL[*]}; do
-    $pkg
-done
+function exec_bool {
+    if [ $1 = true ]; then
+        $2
+    fi
+}
 
-rm -rf $TMP_PATH
+function end {
+    rm -rf $TMP_PATH
+    reboot
+}
 
-if [ $UPDATE_USER_PASSWORD = true ]; then
-    exec_update_passwd
-fi
+deb_update
+deb_install
+
+exec_funcs $PKGS_TO_INSTALL
+
+exec_bool $UPDATE_USER_PASSWORD exec_update_passwd
+
+end
 
