@@ -8,4 +8,5 @@
 * Create logger
 * Create files configuration such .vimrc to update
 * Create script to configure distro
+* Create configurations with distro, interface, etc
 
