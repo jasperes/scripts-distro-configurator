@@ -12,3 +12,7 @@ function deb_configure_keyboard {
     sudo dpkg-reconfigure keyboard-configuration
 }
 
+function deb_configure_timezone {
+    sudo dpkg-reconfigure tzdata
+}
+
