@@ -11,6 +11,7 @@ cd $(dirname $(readlink -f $0))
 source exports.cfg
 source sh/packages.sh
 source sh/executions.sh
+source sh/debian/debian.sh
 
 function exec_funcs {
     for script in $1; do
