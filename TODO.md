@@ -5,6 +5,7 @@
 * Create files configuration such .vimrc to update
 * Create script to configure distro
 * Create configurations with distro, interface, etc
+* Create BLOB Theme configuration
 
 ## Next
 * Create DOWNLOADS file - a list of files to download and link. Valid a possible script to do this.
