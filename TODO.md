@@ -1,16 +1,16 @@
 # TODO
 
 ## Current
-* Create py-script to edit openbox menu xml config
-* Create files configuration such .vimrc to update
-* Create script to configure distro
-* Create configurations with distro, interface, etc
-* Create BLOB Theme configuration
+* add theme in resources
+* create script to update theme 
+* create script to update blob theme
+* add openbox menu.xml
+* create script to update openbox menu.xml
 
-## Next
-* Create DOWNLOADS file - a list of files to download and link. Valid a possible script to do this.
-* Create a TREE file - a file with tree map of files. Valid a possible script to get a file and add into this tree.
-* Create a INSTRUCTIONS file - a help with how to configure and execute script.
-* Create a way to get git project from github and execute installation
-* Create logger
-
+## Future
+* create git alias
+* create bash alias
+* create script to update git & bash alias
+* create script to download programs
+* update README with a "how to"
+* make a command to download & install
