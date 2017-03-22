@@ -6,9 +6,10 @@
 # TODO adicionar etapa para instalar tema openbox
 # TODO adicionar etapa para criar script de execucao dos programas e adicionar no path bin
 
+source exports.cfg
+
 cd $INSTALL_PATH
 
-source exports.cfg
 source sh/packages.sh
 source sh/executions.sh
 source sh/debian.sh
