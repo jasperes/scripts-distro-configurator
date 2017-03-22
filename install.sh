@@ -6,12 +6,13 @@
 # TODO adicionar etapa para instalar tema openbox
 # TODO adicionar etapa para criar script de execucao dos programas e adicionar no path bin
 
-cd $(dirname $(readlink -f $0))
+cd $INSTALL_PATH
 
 source exports.cfg
 source sh/packages.sh
 source sh/executions.sh
-source sh/debian/debian.sh
+source sh/debian.sh
+source sh/theme.sh
 
 function exec_funcs {
     for script in $1; do
@@ -32,6 +33,9 @@ function end {
 
 deb_update
 deb_install
+
+install_theme
+install_blob
 
 exec_funcs $PKGS_TO_INSTALL
 
