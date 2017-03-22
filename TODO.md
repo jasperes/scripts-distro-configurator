@@ -1,9 +1,6 @@
 # TODO
 
 ## Current
-* add theme in resources
-* create script to update theme 
-* create script to update blob theme
 * add openbox menu.xml
 * create script to update openbox menu.xml
 
