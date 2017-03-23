@@ -1,8 +1,7 @@
 # TODO
 
 ## Current
-* add openbox menu.xml
-* create script to update openbox menu.xml
+None
 
 ## Future
 * create git alias
@@ -11,3 +10,12 @@
 * create script to download programs
 * update README with a "how to"
 * make a command to download & install
+
+## Softwares
+* SoapUI
+* Postman
+* MariaDB
+* Weblogic
+
+* ### Maybe?
+    * Oracle?
