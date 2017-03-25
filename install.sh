@@ -1,11 +1,5 @@
 #!/bin/bash
 
-# TODO criar paths
-# TODO mkdir $JAVA_PATH
-# TODO adicionar demais programas a instalar
-# TODO adicionar etapa para instalar tema openbox
-# TODO adicionar etapa para criar script de execucao dos programas e adicionar no path bin
-
 source exports.cfg
 
 cd $INSTALL_PATH
@@ -35,12 +29,12 @@ function end {
 deb_update
 deb_install
 
-install_theme
-install_blob
+theme_install
+theme_blob
+theme_openbox_config
 
 exec_funcs $PKGS_TO_INSTALL
 
 exec_bool $UPDATE_USER_PASSWORD exec_update_passwd
 
 end
-

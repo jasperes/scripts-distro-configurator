@@ -1,6 +1,6 @@
 #!/bin/bash
 
-function install_theme {
+function theme_install {
     ## Install GTK2, GTK3, Openbox themes
     cp -r $RESOURCES_PATH/theme/cathexis ~/.themes
 
@@ -27,8 +27,12 @@ function install_theme {
     cp $RESOURCES_PATH/theme/terminal/Xdefaults ~/.Xdefaults
 }
 
-function install_blob {
+function theme_blob {
     mkdir ~/.config/blob
     cp -r $RESOURCES_PATH/blob/* ~/.config/blob/
     bl-obthemes
+}
+
+function theme_openbox_configs {
+    cp $RESOURCES_PATH/theme/openbox/* ~/.config/openbox/
 }
