@@ -7,32 +7,37 @@ function jdk {
 
 function eclipse_cpp {
     tar -xzvf ide/eclipse-cpp-$ECLIPSE_VERSION-linux-gtk.tar.gz -C $TMP_PATH
-    sudo mv $EXTRACT_PATH/eclipse /opt/eclipse-cpp
+    sudo mv $TMP_PATH/eclipse /opt/eclipse-cpp
     python scripts/update_eclipse_ini.py /opt/eclipse-cpp/eclipse.ini $JDK_BIN
     python scripts/remove_context_in_file $OPENBOX_MENU_PATH ECLIPSE_CPP
 }
 
 function eclipse_jee {
     tar -xzvf ide/eclipse-jee-$ECLIPSE_VERSION-linux-gtk.tar.gz -C $TMP_PATH
-    sudo mv $EXTRACT_PATH/eclipse /opt/eclipse-jee
+    sudo mv $TMP_PATH/eclipse /opt/eclipse-jee
     python scripts/update_eclipse_ini.py /opt/eclipse-jee/eclipse.ini $JDK_BIN
     python scripts/remove_context_in_file $OPENBOX_MENU_PATH ECLIPSE_JEE
 }
 
 function eclipse {
     tar -xzvf ide/eclipse-java-$ECLIPSE_VERSION-linux-gtk.tar.gz -C $TMP_PATH
-    sudo mv $EXTRACT_PATH/eclipse /opt/eclipse-java
+    sudo mv $TMP_PATH/eclipse /opt/eclipse-java
     Python scripts/update_eclipse_ini.py /opt/eclipse-java/eclipse.ini $JDK_BIN
     python scripts/remove_context_in_file $OPENBOX_MENU_PATH ECLIPSE
 }
 
 function sqldeveloper {
     unzip sqldeveloper/sqldeveloper-$SQLDEVELOPER_VERSION-no-jre.zip -d $TMP_PATH
-    sudo mv $EXTRACT_PATH/sqldeveloper /opt/sqldeveloper
+    sudo mv $TMP_PATH/sqldeveloper /opt/sqldeveloper
     cp sqldeveloper/libs/jtds-$JDTS_VERSION.jar /opt/sqldeveloper/jdbc/lib/
     cp sqldeveloper/libs/mysql-connector-java-$MYSQL_JDBC_VERSION-bin.jar /opt/sqldeveloper/jdbc/lib/
     python scripts/update_sqldeveloper_jdk.py /opt/sqldeveloper/sqldeveloper/bin/sqldeveloper.conf $JDK_PATH
     python scripts/remove_context_in_file $OPENBOX_MENU_PATH SQLDEVELOPER
+}
+
+function soapui {
+    tar -xzvf ide/SoapUI-$SOAPUI_VERSION-linux-bin.tar.gz -C $TMP_PATH
+    sudo mv $TMP_PATH/SoapUI-$SOAPUI_VERSION /opt/soapui
 }
 
 function oh_my_zsh {
