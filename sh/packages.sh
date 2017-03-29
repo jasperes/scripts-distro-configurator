@@ -40,6 +40,11 @@ function soapui {
     sudo mv $TMP_PATH/SoapUI-$SOAPUI_VERSION /opt/soapui
 }
 
+function postman {
+    tar -xzvf ide/Postman-linux-x32-$POSTMAN_VERSION.tar.gz -C $TMP_PATH
+    sudo mv $TMP_PATH/Postman /opt/postman
+}
+
 function oh_my_zsh {
     # TODO configurar shell padrão zsh
     suro aptitude -y install zsh

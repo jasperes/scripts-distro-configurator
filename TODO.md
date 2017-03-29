@@ -13,7 +13,6 @@
 * make a command to download & install
 
 ## Softwares
-* Postman
 * MariaDB
 * Weblogic
 
