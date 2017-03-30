@@ -1,7 +1,6 @@
 # TODO
 
 ## Current
-* create link to bin of packages
 
 ## Future
 * create git alias
