@@ -31,7 +31,6 @@ deb_install
 
 theme_install
 theme_blob
-theme_openbox_config
 
 exec_funcs $PKGS_TO_INSTALL
 
