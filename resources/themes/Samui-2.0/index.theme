@@ -1,0 +1,12 @@
+[Desktop Entry]
+Version=1.0
+Encoding=UTF-8
+Name=Samui-2.0
+Type=X-GNOME-Metatheme
+Comment=Created by SiMoNsAyS (http://biohazardinc.deviantart.com/). Based on Samui 2.0 for Mac's Shapeshifter, a work by Brian Zeitler (http://www.pixelnetdesign.com/).
+Name[es_ES]=Samui-2.0
+
+[X-GNOME-Metatheme]
+GtkTheme=Samui-2.0
+MetacityTheme=Samui-2.0
+IconTheme=Samui-2.0

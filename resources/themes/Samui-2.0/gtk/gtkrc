@@ -1,0 +1,67 @@
+style "bluecurve-default"
+{
+  fg[NORMAL]			= "#000000"
+  fg[PRELIGHT]			= "#000000"
+  fg[ACTIVE]				= "#000000"
+  fg[SELECTED]			= "#000000"
+  fg[INSENSITIVE]			= "#A8A8A8"
+  
+#[window background]
+  bg[NORMAL]       = "#E4E4E4"
+#[/window background]
+  bg[ACTIVE]       = "#49A6D1"
+  bg[PRELIGHT]     = "#FFFFFF"
+#[compiz]
+  bg[SELECTED]     = "#F4F4F4"
+#[/compiz]
+  bg[INSENSITIVE]  = "#E4E4E4"
+
+  base[NORMAL]     = "#FFFFFF"
+
+  base[ACTIVE]     = "#49A6D1"
+
+  base[PRELIGHT]   = "#FFFFFF"
+
+  base[INSENSITIVE]= "#FFFFFF"
+  base[SELECTED]   = "#8CD8fD"
+
+  text[NORMAL]			= "#000000"
+  text[PRELIGHT]			= "#000000"
+  text[ACTIVE]			= "#000000"
+  text[SELECTED]			= "#FFFFFF"
+  text[INSENSITIVE]		= "#979797"
+
+  engine "bluecurve" 
+  {
+    contrast = 1.0
+  }
+}
+
+style "bluecurve-menu" = "bluecurve-default"
+{
+  bg[SELECTED]    = { 0.30,0.35,0.65 }
+  fg[PRELIGHT]  = "#ffffff"
+}
+
+style "bluecurve-frame-title" = "bluecurve-default"
+{
+  fg[NORMAL] = { 0.25,0.25,0.25 }
+}
+
+style "bluecurve-tooltips" = "bluecurve-default"
+{
+  bg[NORMAL] = { 1.0,1.0,0.75 }
+}
+
+class "GtkWidget" style "bluecurve-default"
+
+class "GtkMenuItem" style "bluecurve-menu"
+widget_class "*.GtkMenuItem.*" style "bluecurve-menu"
+widget_class "*.GtkAccelMenuItem.*" style "bluecurve-menu"
+widget_class "*.GtkRadioMenuItem.*" style "bluecurve-menu"
+widget_class "*.GtkCheckMenuItem.*" style "bluecurve-menu"
+widget_class "*.GtkImageMenuItem.*" style "bluecurve-menu"
+widget_class "*.GtkPixmapMenuItem.*" style "bluecurve-menu"
+widget_class "*.GtkSeparatorMenuItem.*" style "bluecurve-menu"
+widget_class "*.GtkFrame.GtkLabel" style "bluecurve-frame-title"
+widget "gtk-tooltips" style "bluecurve-tooltips"

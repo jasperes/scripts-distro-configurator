@@ -1,0 +1,12 @@
+# Panel
+panel_monitor = all
+panel_position =  bottom left horizontal
+panel_size = 1% 1
+panel_margin = 0 18
+panel_padding = 0 0 0
+panel_dock = 0
+wm_menu = 0
+panel_layer = top
+panel_background_id = 0
+
+# End of config

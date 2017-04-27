@@ -1,0 +1,10 @@
+[Desktop Entry]
+Type=X-GNOME-Metatheme
+Name=Zukimac
+Comment=A mac-like theme with shiny buttons
+Encoding=UTF-8
+
+[X-GNOME-Metatheme]
+GtkTheme=Zukiwi
+MetacityTheme=Zukimac
+ButtonLayout=:minimize,maximize,close

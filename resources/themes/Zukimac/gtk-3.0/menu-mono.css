@@ -1,0 +1,246 @@
+
+/*********
+ * Menus *
+ *********/
+/* combobox menus */
+GtkTreeMenu.menu {
+	background-color: @menu_bg_color;
+}
+
+GtkTreeMenu .menuitem {
+	padding: 2px;
+	border-style: none;
+}
+
+GtkTreeMenu .menuitem {
+	color: @theme_selected_fg_color;
+}
+
+GtkTreeMenu .menuitem,
+.button .menuitem,
+.toolbar .button .menuitem {
+	text-shadow: none;
+}
+
+.context-menu {
+	font: initial;
+	text-shadow: none;
+}
+
+.menu {
+	background-color: @menu_bg_color;
+	color: @theme_selected_fg_color;
+	padding: 0;
+	border: 1px solid @borders;
+	margin: 4px;
+}
+
+.menu.button {
+	background-image: none;
+	background-color: @theme_base_color;
+	color: @theme_selected_fg_color;
+
+	border-image: none;
+	border-style: none;
+}
+
+.menu.button:hover {
+	background-image: none;
+	background-color: @theme_base_color;
+	color: @theme_selected_fg_color;
+
+	border-image: none;
+	border-style: none;
+}
+
+.menu.button:insensitive {
+	background-color: @theme_base_color;
+	color: lighter(@internal_element_color);
+
+	border-image: none;
+	border-style: none;
+}
+
+/* this controls the general appearance of the menubar */
+.menubar {
+	background-color: @theme_bg_color;
+	border-style: none;
+	-GtkWidget-window-dragging: true;
+}
+
+.menubar .menuitem {
+	border-style: none;
+	padding: 4px 6px;
+	text-shadow: 0 1px @button_text_shadow;
+}
+
+.menubar .menuitem:hover {
+	background-color: @menu_bg_color;
+	border: 1px solid @borders;
+	border-bottom: 0px;
+	border-radius: 2px 2px 0 0;
+}
+
+.menubar .menuitem:hover {
+	color: @theme_selected_fg_color;
+}
+
+.menu .menuitem {
+	-GtkMenuItem-arrow-scaling: 0.8;
+	padding: 4px;
+}
+
+.menu .menuitem:hover {
+	border-radius: 0;
+}
+
+.menu .menuitem:active,
+.menu .menuitem:hover {
+	background-color: @theme_selected_bg_color;
+	text-shadow: none;
+	border: none;
+}
+
+.menu .menuitem:insensitive {
+	background-color: transparent;
+}
+
+.menu .menuitem:active,
+.menu .menuitem:hover {
+	color: @theme_selected_fg_color;
+}
+
+.menu .menuitem *:insensitive {
+	color: mix (@menu_fg_color, @menu_bg_color, 0.6);
+}
+
+.menu .menuitem .accelerator:insensitive {
+	color: mix (@menu_fg_color, @menu_bg_color, 0.7);
+}
+
+.menuitem .accelerator {
+	color: alpha (@theme_selected_fg_color, 0.4);
+}
+
+.menuitem .accelerator:hover,
+.menuitem .accelerator:active {
+	color: alpha (@theme_selected_fg_color, 0.7);
+}
+
+GtkModelMenuItem GtkBox GtkImage {
+	padding-right: 6px;
+}
+
+.menuitem.arrow {
+	-gtk-icon-source: -gtk-icontheme("pan-end-symbolic");
+}
+.menuitem.arrow:dir(rtl) {
+	-gtk-icon-source: -gtk-icontheme("pan-end-symbolic-rtl");
+}
+
+.menuitem.arrow {
+	color: @theme_selected_fg_color;
+}
+
+.menuitem.separator {
+	color: @menu_separator;
+
+	-GtkMenuItem-horizontal-padding: 0;
+}
+
+.menuitem.check {
+	-gtk-icon-source: -gtk-icontheme("radio-symbolic");
+	color: @theme_fg_color;
+	icon-shadow: none; 
+}
+.menuitem.check:active, .menuitem.check:checked {
+	-gtk-icon-source: -gtk-icontheme("radio-checked-symbolic"); 
+}
+.menuitem.check:inconsistent {
+	-gtk-icon-source: -gtk-icontheme("radio-mixed-symbolic"); 
+}
+.menuitem.check:hover {
+	color: @theme_selected_fg_color;
+}
+.menuitem.check:insensitive {
+	color: @insensitive_fg_color; 
+}
+
+.menuitem.radio {
+	-gtk-icon-source: -gtk-icontheme("radio-symbolic");
+	color: @theme_selected_fg_color;
+	icon-shadow: none; 
+}
+.menuitem.radio:active, .menuitem.radio:checked {
+	-gtk-icon-source: -gtk-icontheme("radio-checked-symbolic"); 
+}
+.menuitem.radio:inconsistent {
+	-gtk-icon-source: -gtk-icontheme("radio-mixed-symbolic"); 
+}
+.menuitem.radio:hover {
+	color: @theme_selected_fg_color;
+}
+.menuitem.radio:insensitive {
+	color: @insensitive_fg_color; 
+}
+
+/***************
+ * Menu Button *
+ ***************/
+.toolbar GtkMenuButton.menu-button:active,
+.toolbar GtkMenuButton.menu-button.raised:active,
+GtkMenuButton.menu-button:active,
+.linked GtkMenuButton.menu-button:active,
+.toolbar .linked.raised GtkMenuButton.menu-button:active,
+.toolbar GtkMenuButton.menu-button.linked.raised:active {
+/*	background-image: none;
+	background-color: @menu_bg_color;
+
+	border-image: none;
+	border-color: @menu_bg_color;
+	border-radius: 4px 4px 0 0;
+	color: @theme_text_color;*/
+}
+
+GtkMenuButton.menu-button:active,
+.linked GtkMenuButton.menu-button:active,
+.toolbar .linked.raised GtkMenuButton.menu-button:active,
+.toolbar GtkMenuButton.menu-button.linked.raised:active {
+	text-shadow: none;
+	icon-shadow: none;
+	box-shadow: none;
+}
+
+.linked GtkMenuButton.menu-button:active:last-child,
+.toolbar .linked.raised GtkMenuButton.menu-button:active:last-child,
+.toolbar GtkMenuButton.menu-button.linked.raised:active:last-child {
+	border-top-left-radius: 0;
+}
+
+.linked GtkMenuButton.menu-button:active:first-child,
+.toolbar .linked.raised GtkMenuButton.menu-button:active:first-child,
+.toolbar GtkMenuButton.menu-button.linked.raised:active:first-child {
+	border-top-right-radius: 0;
+}
+
+.button.menuitem.menubar:active {
+	background-image: none;
+	background-color: @menu_bg_color;
+
+	border-radius: 4px 4px 0 0;
+	border-image: none;
+	border-width: 1px 1px 0 1px;
+	border-color: @menu_bg_color;
+	border-style: solid;
+}
+
+.button.menuitem.menubar:active,
+GtkMenuButton.menu-button:active,
+.toolbar GtkMenuButton.menu-button:active {
+	color: @theme_selected_fg_color;
+}
+
+GtkMenuButton .menu {
+	text-shadow: none;
+}
+

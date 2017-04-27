@@ -1,0 +1,12 @@
+<b>Configuration name: Crystal</b>	
+Saved at Qua Abr  5 22:31:24 BRT 2017
+
+Terminator config:  /home/user/.config/terminator/config\n
+Openbox theme:  Mistral-Thin\n
+GTK theme:  MurrinaCrystalCurve\n
+Running Conkys:\t\n\t/home/user/.config/conky/vorta.conkyrc;\n
+Running Tint2s:\t\n\t/home/user/.config/tint2/vorta.conky.tint2rc\n\t/home/user/.config/tint2/ninix.tint2rc\n
+Background set with nitrogen:\n/home/user/Pictures/wallpapers/crystal/abstract_universe.jpg;\n/home/user/Pictures/wallpapers/purple-universe-3175.jpg;\n
+dmenu config:  /home/user/.config/dmenu/dmenu-bind.sh\n
+Lightdm config:  /etc/lightdm/lightdm-gtk-greeter.conf\n
+X terminal config:  /home/user/.bashrc;/home/user/.Xresources\n

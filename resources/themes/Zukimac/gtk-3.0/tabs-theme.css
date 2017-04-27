@@ -1,0 +1,158 @@
+/*****************
+ * tabs          *
+ *****************/
+
+@define-color theme_tab_bg_color shade(mix (@theme_selected_bg_color, @theme_bg_color, 0.35), 1.25);
+
+.notebook tab {
+	background-image: -gtk-gradient (linear,
+                                     left top, left bottom,
+                                     from (shade(@theme_bg_color, 1.07)),
+                                     color-stop (0.48, shade(@theme_bg_color, 1.0)),
+                                     color-stop (0.52, shade(@theme_bg_color, 1.0)),
+                                     to   (shade(@theme_bg_color, 1.07)));
+
+    border-width: 1px;
+    border-style: solid;
+	border-radius: 0px;
+	border-color: shade(@theme_bg_color, 0.85);
+	border-image: none;
+    box-shadow: inset  1px  1px alpha(#fff, 0.08),
+                inset -1px -1px alpha(#fff, 0.08);
+    color: shade(@theme_text_color, 0.95);
+    text-shadow: 0 1px #fff;
+
+}
+
+.notebook tab:active {
+   background-image: -gtk-gradient (linear,
+                                     left top, left bottom,
+                                     from (shade (@theme_selected_bg_color, 1.20)),
+									 color-stop (0.40, shade(@theme_selected_bg_color, 1.35)),
+									 to   (shade(@theme_selected_bg_color, 1.45)));
+
+	border-color: shade(@theme_bg_color, 0.8);
+	border-image: none;
+    box-shadow: inset  0px  4px alpha(#000, 0.00),
+				inset  0px  3px alpha(#000, 0.00),
+				inset  0px  2px alpha(#000, 0.00),
+				inset  0px  1px alpha(#000, 0.00),
+
+                inset  4px  0px alpha(#000, 0.00),
+                inset  3px  0px alpha(#000, 0.01),
+                inset  2px  0px alpha(#000, 0.02),
+                inset  1px  0px alpha(#000, 0.04),
+
+                inset -4px  0px alpha(#000, 0.00),
+                inset -3px  0px alpha(#000, 0.01),
+                inset -2px  0px alpha(#000, 0.02),
+                inset -1px  0px alpha(#000, 0.04);
+
+}
+
+.notebook tab,
+.notebook tab GtkLabel {
+	color: shade(@theme_text_color, 1.00);
+	text-shadow: none;
+}
+
+/* Notebook */
+.notebook {
+    padding: 0px;
+    background-color: shade(@theme_bg_color, 1.07);
+    background-image: none;
+    border-style: solid;
+    border-color: transparent;
+    border-width: 1px 0 0 0;
+    border-radius: 0;
+    border-top-color:           shade(@theme_bg_color, 0.9);
+/*    box-shadow: inset  0  0 alpha(#000, 0.01),*/
+/*				inset  0px  0px alpha(#000, 0.04),*/
+/*				inset  0px  -1px alpha(#000, 0.06);*/
+
+    -GtkWidget-focus-line-width: 0;
+}
+
+.notebook GtkDrawingArea {
+	background-color: shade (@theme_bg_color, 0.97);
+}
+
+/* Tabs raius and size */
+.notebook tab:first-child:active,
+.notebook tab:first-child {
+    border-radius: 5px 0px 0px 0px;
+}
+
+.notebook tab:last-child:active,
+.notebook tab:last-child {
+    border-radius: 0px 5px 0px 0px;
+}
+
+.notebook tab:only-child {
+    border-radius: 0px 0px 0px 0px;
+}
+
+.notebook tab.top {
+    padding: 3px 7px;
+    border-bottom-width: 0px;
+}
+
+.notebook tab.bottom {
+    padding: 3px 7px;
+    border-top-width: 0px;
+}
+
+.notebook tab.right {
+    padding: 3px 7px;
+    border-left-width: 0px;
+}
+
+.notebook tab.left {
+    padding: 3px 7px;
+    border-right-width: 0px;
+}
+
+.notebook tab *:insensitive {
+	text-shadow: none;
+}
+
+/* close button */
+.notebook tab .button,
+.notebook tab .button:active,
+.notebook tab .button:hover {
+    background-image: none;
+    background-color: transparent;
+    border-image: none;
+    border-width: 0;
+    border-style: solid;
+    border-color: shade(@theme_bg_color, 0.8);
+    box-shadow: none;
+}
+
+.notebook tab .button GtkImage {
+    border-radius: 5px;
+    color: mix(@theme_bg_color, @theme_fg_color, 0.75);
+    border-width: 0;
+    border-style: solid;
+    border-color: shade(@theme_bg_color, 0.8);
+    border-image: none;
+    padding: 0;
+
+    icon-shadow: none;
+}
+
+.notebook tab .button GtkImage:hover {
+    color: @theme_fg_color;
+    border-color: shade(@theme_bg_color, 0.8);
+    border-image: none;
+}
+
+.notebook tab .button GtkImage:active,
+.notebook tab .button GtkImage:active:hover {
+    background-color: alpha(black, 0.15);
+    color: @theme_fg_color;
+    icon-shadow: none;
+    border-color: shade(@theme_bg_color, 0.8);
+}
+
+

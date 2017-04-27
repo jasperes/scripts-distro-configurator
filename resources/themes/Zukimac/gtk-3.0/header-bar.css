@@ -1,0 +1,192 @@
+
+.header-bar {
+    padding: 5px 3px 5px 5px;
+    background-image: url("assets/background.png"),
+                     -gtk-gradient (linear,
+                                     left top, left bottom,
+                                     from (shade(@theme_bg_color, 1.00)),
+                                     to   (shade(@theme_bg_color, 0.95)));
+    border-bottom-color: shade (@theme_bg_color, 1.1);
+    border-style: solid;
+    border-width: 0 0 0 0;
+    border-radius: 0;
+
+    color: @theme_fg_color;
+    text-shadow: 0 -1px shade (@theme_bg_color, 0.7);
+
+    box-shadow: none;
+}
+
+/***********
+ * header-bar Buttons *
+ ***********/
+
+.header-bar .button * {
+    padding: 0px 0px;
+}
+
+
+.header-bar .button {
+    -GtkWidget-focus-line-width: 1px;
+
+	background-image: linear-gradient(to bottom, 
+		@button_gradient_color_a,
+		shade(@button_gradient_color_b, 0.92) 50%,
+		shade(@button_gradient_color_b, 0.92) 49%, 
+		@button_gradient_color_b);
+
+
+    box-shadow: inset  0px  2px alpha(#000, 0.06),
+                inset  2px  0px alpha(#000, 0.09),
+                inset -2px  0px alpha(#000, 0.09),
+                inset  0px -2px alpha(#000, 0.07),
+		inset  0px  1px alpha(#333, 0.10),
+                inset  1px  0px alpha(#333, 0.10),
+                inset -1px  0px alpha(#333, 0.10),
+                inset  0px -1px alpha(#333, 0.10);
+
+	/* box-shadow Syntax */
+	/* box-shadow: [ inset ] horizontal_offset vertical_offset [ blur_radius ] [ spread ] color */
+
+        color: @theme_fg_color;
+	text-shadow: 0px 1px #eee;
+
+}
+
+.header-bar .button:hover {
+	background-image: linear-gradient(to bottom,
+		@button_hover_gradient_color_a,
+		shade(@button_hover_gradient_color_b, 0.92) 50%,
+		shade(@button_hover_gradient_color_b, 0.92) 49%,  
+		@button_hover_gradient_color_b);
+
+    box-shadow: inset  0px  2px alpha(#000, 0.11),
+                inset  2px  0px alpha(#000, 0.09),
+                inset -2px  0px alpha(#000, 0.09),
+                inset  0px -2px alpha(#000, 0.07),
+		inset  0px  1px alpha(#333, 0.10),
+                inset  1px  0px alpha(#333, 0.10),
+                inset -1px  0px alpha(#333, 0.10),
+                inset  0px -1px alpha(#333, 0.10);
+
+}
+
+.header-bar .button:active,
+.header-bar .button:hover:active,
+.header-bar .button:focus:active {
+
+	background-image: -gtk-gradient (linear, left top, left bottom,
+	                                 from (shade(@button_active_gradient_color_a, 0.92)),
+                                     color-stop (0.30, shade(@button_active_gradient_color_a, 0.98)),
+	                                 to   (shade(@button_active_gradient_color_b, 1.0)));
+
+    border-top-color: 		transparent;
+    border-left-color: 		alpha (#000, 0.01);
+    border-right-color: 	alpha (#000, 0.01);
+    border-bottom-color: 	alpha (#000, 0.02);
+
+
+    box-shadow: inset  0px  4px alpha(#000, 0.02),
+		inset  0px  3px alpha(#000, 0.03),
+		inset  0px  2px alpha(#000, 0.04),
+                inset  3px  0px alpha(#000, 0.02),
+                inset  2px  0px alpha(#000, 0.03),
+                inset -3px  0px alpha(#000, 0.02),
+                inset -2px  0px alpha(#000, 0.03),
+                inset  0px -2px alpha(#000, 0.01),
+		inset  0px  1px alpha(#333, 0.10),
+                inset  1px  0px alpha(#333, 0.10),
+                inset -1px  0px alpha(#333, 0.10),
+                inset  0px -1px alpha(#333, 0.10);
+
+}
+
+.header-bar .button:focus,
+.header-bar .button.default {
+    border-top-color: 		alpha(@focused_dark_entry_outer, 0.95);
+    border-right-color: 	alpha(@focused_dark_entry_outer, 1.00);
+    border-left-color: 		alpha(@focused_dark_entry_outer, 1.00);
+    border-bottom-color: 	alpha(@focused_dark_entry_outer, 0.95);
+
+    box-shadow: inset  0px  2px alpha(#000, 0.08),
+                inset  2px  0px alpha(#000, 0.07),
+                inset -2px  0px alpha(#000, 0.07),
+                inset  0px -2px alpha(#000, 0.06),
+		inset  0px  1px alpha(#333, 0.10),
+                inset  1px  0px alpha(#333, 0.10),
+                inset -1px  0px alpha(#333, 0.10),
+                inset  0px -1px alpha(#333, 0.10);
+}
+
+.header-bar .button *:active,
+.header-bar .button *:hover:active {
+	color: @theme_selected_fg_color;
+	text-shadow: 1px 1px #333;
+}
+
+.header-bar .linked .button:insensitive,
+.header-bar .button.raised.linked:insensitive,
+.header-bar .raised.linked .button:insensitive {
+    background-image: none;
+    background-color: transparent;
+    border-image: none;
+	box-shadow: inset  0px  2px alpha(#000, 0.08),
+                inset  2px  0px alpha(#000, 0.07),
+                inset -2px  0px alpha(#000, 0.07),
+                inset  0px -2px alpha(#000, 0.06),
+		inset  0px  1px alpha(#333, 0.10),
+                inset  1px  0px alpha(#333, 0.10),
+                inset -1px  0px alpha(#333, 0.10),
+                inset  0px -1px alpha(#333, 0.10);
+
+}
+
+.header-bar .button:last-child {
+    background-color: transparent;
+    border-image: none;
+	box-shadow: inset  0px  2px alpha(#000, 0.08),
+                inset  2px  0px alpha(#000, 0.07),
+                inset -2px  0px alpha(#000, 0.07),
+                inset  0px -2px alpha(#000, 0.06),
+		inset  0px  1px alpha(#333, 0.10),
+                inset  1px  0px alpha(#333, 0.10),
+                inset -1px  0px alpha(#333, 0.10),
+                inset  0px -1px alpha(#333, 0.10);
+}
+
+.header-bar .button:active:last-child {
+	background-image: -gtk-gradient (linear, left top, left bottom,
+	                                 from (shade(@button_active_gradient_color_a, 0.92)),
+                                     color-stop (0.30, shade(@button_active_gradient_color_a, 0.98)),
+	                                 to   (shade(@button_active_gradient_color_b, 1.0)));
+
+    border-top-color: 		transparent;
+    border-left-color: 		alpha (#000, 0.01);
+    border-right-color: 	alpha (#000, 0.01);
+    border-bottom-color: 	alpha (#000, 0.02);
+
+
+    box-shadow: inset  0px  4px alpha(#000, 0.02),
+		inset  0px  3px alpha(#000, 0.03),
+		inset  0px  2px alpha(#000, 0.04),
+                inset  3px  0px alpha(#000, 0.02),
+                inset  2px  0px alpha(#000, 0.03),
+                inset -3px  0px alpha(#000, 0.02),
+                inset -2px  0px alpha(#000, 0.03),
+                inset  0px -2px alpha(#000, 0.01),
+		inset  0px  1px alpha(#333, 0.10),
+                inset  1px  0px alpha(#333, 0.10),
+                inset -1px  0px alpha(#333, 0.10),
+                inset  0px -1px alpha(#333, 0.10);
+
+}
+
+
+.header-bar .button *:insensitive {
+    background-image: none;
+    background-color: transparent;
+	color: @insensitive_fg_color;
+	box-shadow: none;
+	text-shadow: none;
+}
+

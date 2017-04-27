@@ -1,0 +1,202 @@
+/*********
+ * Menus *
+ *********/
+ combobox menus 
+
+GtkTreeMenu.menu {
+	background-color: @menu_bg_color;
+}
+
+GtkTreeMenu .menuitem {
+	padding: 2px;
+	border-style: none;
+}
+
+/* FIXME: Figure out why menuitem:hover doesn't change anything here */
+GtkTreeMenu .menuitem {
+	color: @theme_text_color;
+}
+
+GtkTreeMenu .menuitem,
+.button .menuitem,
+.toolbar .button .menuitem {
+	text-shadow: none;
+}
+
+.context-menu {
+	font: initial;
+	text-shadow: none;
+}
+
+.menu {
+	background-color: @menu_bg_color;
+	color: @menu_fg_color;
+	padding: 0;
+/*	border: 1px solid @borders;*/
+}
+
+.menu.button {
+	background-image: none;
+	background-color: @theme_base_color;
+	color: @internal_element_color;
+
+	border-image: none;
+	border-style: none;
+}
+
+.menu.button:hover {
+	background-image: none;
+	background-color: @theme_base_color;
+	color: @theme_text_color;
+
+	border-image: none;
+	border-style: none;
+}
+
+.menu.button:insensitive {
+	background-color: @theme_base_color;
+	color: lighter(@internal_element_color);
+
+	border-image: none;
+	border-style: none;
+}
+
+/* this controls the general appearance of the menubar */
+.menubar {
+	background-image: linear-gradient(to bottom,
+		@theme_bg_color,
+		shade (@theme_bg_color, 0.94));
+	border-style: none;
+/*	box-shadow: inset 0 -1px 0 0 @theme_bg_color;*/
+	-GtkWidget-window-dragging: true;
+}
+
+.menubar .menuitem {
+	border-style: none;
+	padding: 4px 6px;
+	text-shadow: 0 1px @button_text_shadow;
+}
+
+.menubar .menuitem:hover {
+	background-image: linear-gradient(to bottom,
+		shade (@theme_bg_color, 1.0),
+		shade (@theme_bg_color, 0.82));
+}
+
+.menubar .menuitem:hover {
+	color: @menu_fg_color;
+}
+
+.menu .menuitem {
+	-GtkMenuItem-arrow-scaling: 0.4;
+	padding: 4px;
+}
+
+.menu .menuitem:hover {
+	border-radius: 0;
+}
+
+.menu .menuitem:active,
+.menu .menuitem:hover {
+	background-color: @theme_selected_bg_color;
+	background-image: linear-gradient(to bottom,
+		shade (@theme_selected_bg_color, 1.0),
+		shade (@theme_selected_bg_color, 0.85));
+	text-shadow: none;
+	border: none;
+}
+
+.menu .menuitem:insensitive {
+	background-color: transparent;
+}
+
+.menu .menuitem:active,
+.menu .menuitem:hover {
+	color: @theme_selected_fg_color;
+}
+
+.menu .menuitem *:insensitive {
+	color: mix (@menu_fg_color, @menu_bg_color, 0.6);
+}
+
+.menu .menuitem .accelerator:insensitive {
+	color: mix (@menu_fg_color, @menu_bg_color, 0.7);
+}
+
+.menuitem .accelerator {
+	color: alpha (@menu_fg_color, 0.4);
+}
+
+.menuitem .accelerator:hover,
+.menuitem .accelerator:active {
+	color: alpha (@theme_selected_fg_color, 0.7);
+}
+
+GtkModelMenuItem GtkBox GtkImage {
+	padding-right: 6px;
+}
+
+.menuitem.arrow {
+	color: @menu_controls_color;
+}
+
+.menuitem.separator {
+	color: @menu_separator;
+
+	-GtkMenuItem-horizontal-padding: 0;
+}
+
+.menuitem.check,
+.menuitem.radio,
+.menuitem.check:hover,
+.menuitem.radio:hover,
+.menuitem.check:insensitive,
+.menuitem.radio:insensitive {
+	background-image: none;
+	background-color: transparent;
+}
+
+.menuitem.check:active,
+.menuitem.radio:active {
+	background-color: transparent;
+}
+
+.menuitem.check:active {
+	background-image: url("assets/menuitem-checkbox-checked.svg");
+}
+
+.menuitem.check:active:hover {
+	background-image: url("assets/menuitem-checkbox-checked-selected.svg");
+}
+
+.menuitem.check:active:insensitive {
+	background-image: url("assets/menuitem-checkbox-checked-insensitive.svg");
+}
+
+.menuitem.check:inconsistent,
+.menuitem.radio:inconsistent {
+	background-image: url("assets/menuitem-checkbox-mixed.svg");
+}
+
+.menuitem.check:inconsistent:insensitive,
+.menuitem.radio:inconsistent:insensitive {
+	background-image: url("assets/menuitem-checkbox-mixed-insensitive.svg");
+}
+
+.menuitem.check:inconsistent:hover,
+.menuitem.radio:inconsistent:hover {
+	background-image: url("assets/menuitem-checkbox-mixed-selected.svg");
+}
+
+.menuitem.radio:active {
+	background-image: url("assets/menuitem-radio-checked.svg");
+}
+
+.menuitem.radio:active:hover {
+	background-image: url("assets/menuitem-radio-checked-selected.svg");
+}
+
+.menuitem.radio:active:insensitive {
+	background-image: url("assets/menuitem-radio-checked-insensitive.svg");
+}
+
