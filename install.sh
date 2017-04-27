@@ -1,5 +1,10 @@
 #!/bin/bash
 
+# Main executor, calling all scripts to do they jobs.
+#
+# Any logic will be implemented here then business logic,
+# for a generic installer script.
+
 source exports.cfg
 
 cd $INSTALL_PATH

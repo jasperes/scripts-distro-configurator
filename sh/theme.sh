@@ -1,5 +1,10 @@
 #!/bin/bash
 
+# Theme Scripter
+# Here we will update files corresponding to distro theme
+# 
+# ALERT! any old file will be deleted...
+
 function theme_install {
 
     ## Install GTK2, GTK3, Openbox themes

@@ -1,5 +1,8 @@
 #!/bin/bash
 
+# Debian system configuration
+# Scripts to update, install or configure debian.
+
 function deb_update {
     sudo aptitude update
 }
