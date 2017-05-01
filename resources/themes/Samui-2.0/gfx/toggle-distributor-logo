@@ -1,2 +1,0 @@
-#!/bin/bash
-sudo ln -s -f ~/.themes/Samui-2.0/gfx/distributor-logo.png /usr/share/icons/hicolor/48x48/apps/distributor-logo.png
