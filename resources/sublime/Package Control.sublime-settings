@@ -1,0 +1,23 @@
+{
+	"bootstrapped": true,
+	"in_process_packages":
+	[
+	],
+	"installed_packages":
+	[
+		"All Autocomplete",
+		"Anaconda",
+		"ColorPicker",
+		"Emmet",
+		"Git",
+		"GitGutter",
+		"MarkdownEditing",
+		"Neon Color Scheme",
+		"Package Control",
+		"SideBarEnhancements",
+		"SublimeLinter",
+		"SublimeLinter-flake8",
+		"SublimeREPL",
+		"Theme - Centurion"
+	]
+}

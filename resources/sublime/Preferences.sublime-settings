@@ -1,0 +1,16 @@
+{
+	// Sublime Theme
+	"color_scheme": "Packages/Neon Color Scheme/Neon.tmTheme",
+	"font_face": "Cousine",
+	"font_size": 10,
+	"theme": "Centurion.sublime-theme",
+	
+	// Sublime Settings
+	"ignored_packages":
+	[
+		"vintage"
+	],
+
+	// Anaconda
+	"validate_imports": "true",
+}
