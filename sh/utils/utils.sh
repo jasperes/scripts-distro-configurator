@@ -11,3 +11,18 @@ function exec_bool() {
         $2
     fi
 }
+
+function is_to_download() {
+	# Test to not download
+	if [[ $DOWNLOAD == false ||
+			# Or is on exclude or everithing to exclude
+			( $DISTRO_REPO_PACKAGES_EXCLUDE == *$1* || $DISTRO_REPO_PACKAGES_EXCLUDE == *ALL* && 
+				# And package not include and not all to include
+				( $DISTRO_REPO_PACKAGES_INCLUDE != *$1* && $DISTRO_REPO_PACKAGES_INCLUDE != *ALL*
+				)
+			)
+		]]
+	then
+		return -1
+	fi;
+}
