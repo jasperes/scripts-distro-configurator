@@ -1,6 +1,15 @@
 #!/bin/bash
 
 function jdk() {
-    sudo tar -xzvf java/jdk-$JDK7_VERSION-linux-i586.tar.gz -C $JAVA_PATH
-    sudo tar -xzvf java/jdk-$JDK8_VERSION-linux-i586.tar.gz -C $JAVA_PATH
+
+	if [[ $ARCH == 'x86' ]]; then
+		JDK_ARCH='i586'
+	elif [[ $ARCH == 'x86_64' ]]; then
+		JDK_ARCH='x64'
+	fi;
+
+	for version in $JDK_VERSIONS; do
+		sudo tar -xzvf $PATH_PACKAGES/jdk-${version}-linux-$JDK_ARCH.tar.gz -C $JAVA_PATH
+	done;
+	
 }
