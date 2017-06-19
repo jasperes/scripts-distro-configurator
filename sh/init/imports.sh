@@ -19,16 +19,16 @@ source sh/configurations/executions.sh
 source sh/configurations/theme.sh
 
 # Distro
-if [ DISTRO == 'debian' ]; then
+if [[ $DISTRO == 'debian' ]]; then
 	source sh/distro/debian.sh
-elif [ DISTRO == 'archlinux' ]; then
+elif [[ $DISTRO == 'archlinux' ]]; then
 	source sh/distro/archlinux.sh
 fi;
 
 # WM
-if [ WM == 'i3' ]; then
+if [[ $WM == 'i3' ]]; then
 	source sh/wm/i3.sh
-elif [ WM == 'openbox' ]; then
+elif [[ $WM == 'openbox' ]]; then
 	source sh/wm/openbox.sh
 fi;
 
