@@ -9,6 +9,8 @@ source configurations/versions.conf
 source configurations/settings.conf
 
 # Utils
+source sh/utils/utils.sh
+source sh/utils/log.sh
 source sh/utils/create_run_file.sh
 
 # Scripts Configurations
