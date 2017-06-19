@@ -3,19 +3,19 @@
 # Debian system configuration
 # Scripts to update, install or configure debian.
 
-function deb_update {
+function distro_update() {
     sudo aptitude update
 }
 
-function deb_install {
+function distro_install_dependencies() {
     sudo aptitude -y install $DEPENDENCIES
 }
 
-function deb_configure_keyboard {
+function distro_configure_keyboard() {
     sudo dpkg-reconfigure keyboard-configuration
 }
 
-function deb_configure_timezone {
+function distro_configure_timezone() {
     sudo dpkg-reconfigure tzdata
 }
 

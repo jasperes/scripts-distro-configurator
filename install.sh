@@ -1,44 +1,15 @@
 #!/bin/bash
 
-# Main executor, calling all scripts to do they jobs.
-#
-# Any logic will be implemented here then business logic,
-# for a generic installer script.
+cd $(dirname $(readlink -f $0))
 
-source exports.cfg
+# 1.imports
+source sh/init/imports.sh
 
-cd $INSTALL_PATH
+# 2.confirm configurations
+# 3.Test
+# 4.Setup
 
-source sh/packages.sh
-source sh/executions.sh
-source sh/debian.sh
-source sh/theme.sh
+# 5.Execute
+execute
 
-function exec_funcs {
-    for script in $1; do
-        $script
-    done
-}
-
-function exec_bool {
-    if [ $1 = true ]; then
-        $2
-    fi
-}
-
-function end {
-    rm -rf $TMP_PATH
-    reboot
-}
-
-deb_update
-deb_install
-
-theme_install
-theme_blob
-
-exec_funcs $PKGS_TO_INSTALL
-
-exec_bool $UPDATE_USER_PASSWORD exec_update_passwd
-
-end
+# 6.Clean

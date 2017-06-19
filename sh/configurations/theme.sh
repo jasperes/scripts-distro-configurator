@@ -5,7 +5,7 @@
 # 
 # ALERT! any old file will be deleted...
 
-function theme_install {
+function theme_install() {
 
     ## Install GTK2, GTK3, Openbox themes
     rm -rf ~/.local/share/themes/*
@@ -26,7 +26,7 @@ function theme_install {
     
 }
 
-function theme_blob {
+function theme_blob() {
     mkdir ~/.config/blob
     cp -r $RESOURCES/blob/* ~/.config/blob/
     bl-obthemes
