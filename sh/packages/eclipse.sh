@@ -16,7 +16,7 @@ function _run_eclipse() {
     OPT_PATH=/opt/eclipse-$1
 
     if $(is_to_download eclipse_$1); then
-        _download_eclipse $1
+        download_package "http://eclipse.c3sl.ufpr.br/technology/epp/downloads/release/${ECLIPSE_VERSION}/${ECLIPSE_RELEASE}/eclipse-${1}-${ECLIPSE_VERSION}-${ECLIPSE_RELEASE}-linux-gtk-${ARCH}.tar.gz"
     fi;
 
     tar -xzvf $PATH_PACKAGES/eclipse-$1-$ECLIPSE_VERSION-$ECLIPSE_RELEASE-linux-gtk-$ARCH.tar.gz -C $TMP_PATH
@@ -29,10 +29,4 @@ function _run_eclipse() {
     fi;
 
     create_run $OPT_PATH "./eclipse" "eclipse-$1"
-}
-
-function _download_eclipse() {
-    cd $PATH_PACKAGES &&
-    { curl -O "http://eclipse.c3sl.ufpr.br/technology/epp/downloads/release/${ECLIPSE_VERSION}/${ECLIPSE_RELEASE}/eclipse-${1}-${ECLIPSE_VERSION}-${ECLIPSE_RELEASE}-linux-gtk-${ARCH}.tar.gz" ;
-    cd -; }
 }

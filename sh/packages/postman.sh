@@ -3,9 +3,18 @@
 function postman() {
     OPT_PATH=/opt/postman
 
-    # curl https://dl.pstmn.io/download/latest/linux64
-    tar -xzvf ide/Postman-linux-x32-$POSTMAN_VERSION.tar.gz -C $TMP_PATH
+    if [[ ARCH == 'x86' ]]; then
+        POSTMAN_ARCH='32'
+    elif [[ ARCH == 'x86_64' ]]; then
+        POSTMAN_ARCH='64'
+    fi;
+
+    if $(is_to_download postman); then
+        download_package "https://dl.pstmn.io/download/latest/linux${POSTMAN_ARCH}"
+    fi;
+
+    tar -xzvf $PATH_PACKAGES/Postman-linux-x$POSTMAN_ARCH-$POSTMAN_VERSION.tar.gz -C $TMP_PATH
     sudo mv $TMP_PATH/Postman $OPT_PATH
 
-    _create_run $OPT_PATH "./Postman" "postman"
+    create_run $OPT_PATH "./Postman" "postman"
 }
