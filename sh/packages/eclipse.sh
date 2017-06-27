@@ -25,7 +25,7 @@ function _run_eclipse() {
     Python scripts/update_eclipse_ini.py $OPT_PATH/eclipse.ini $JDK_BIN
 
     if [[ $WM == 'openbox' ]]; then
-        python scripts/remove_context_in_file $OPENBOX_MENU_PATH $(echo eclipse-$2 | awk '{print toupper($0)}')
+        python scripts/remove_context_in_file $OPENBOX_MENU_PATH $(echo eclipse-$1 | awk '{print toupper($0)}')
     fi;
 
     create_run $OPT_PATH "./eclipse" "eclipse-$1"
