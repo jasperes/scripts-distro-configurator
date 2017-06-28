@@ -1,8 +1,8 @@
 #!/bin/bash
 
-funcion create_run() {
+function create_run() {
     touch $1/run.sh
-    
+
     echo "#\!/bin/bash" >> $1/run.sh
     echo cd $1 >> $1/run.sh
     echo $2 >> $1/run.sh

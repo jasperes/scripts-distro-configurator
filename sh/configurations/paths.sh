@@ -1,5 +1,6 @@
 #!/bin/bash
 
-funnction create_paths() {
+function create_paths() {
 	# TODO
+    echo
 }
