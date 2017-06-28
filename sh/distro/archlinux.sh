@@ -5,5 +5,5 @@ function distro_update() {
 }
 
 function distro_install_dependencies() {
-    sudo pacman -S $DEPENDENCIES
+    eval "sudo pacman -S ${DEPENDENCIES[*]}"
 }

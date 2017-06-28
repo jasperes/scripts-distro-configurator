@@ -8,7 +8,7 @@ function distro_update() {
 }
 
 function distro_install_dependencies() {
-    sudo aptitude -y install $DEPENDENCIES
+    eval "sudo aptitude -y install ${DEPENDENCIES[*]}"
 }
 
 function distro_configure_keyboard() {

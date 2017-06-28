@@ -1,5 +1,8 @@
 #!/bin/bash
 
+# Principal Settings
+source settings.conf
+
 # Configurations
 source configurations/paths.conf
 source configurations/dependencies.conf
@@ -16,19 +19,25 @@ source sh/utils/create_run_file.sh
 # Scripts Configurations
 source sh/configurations/paths.sh
 source sh/configurations/executions.sh
-source sh/configurations/theme.sh
+
+# Init
+source sh/init/confirm.sh
+source sh/init/tests.sh
+source sh/init/setup.sh
+source sh/init/execute.sh
+source sh/init/clean.sh
 
 # Distro
-if [[ $DISTRO == 'debian' ]]; then
+if [[ "$DISTRO" == "debian" ]]; then
 	source sh/distro/debian.sh
-elif [[ $DISTRO == 'archlinux' ]]; then
+elif [[ "$DISTRO" == "archlinux" ]]; then
 	source sh/distro/archlinux.sh
 fi;
 
 # WM
-if [[ $WM == 'i3' ]]; then
+if [[ "$WM" == "i3" ]]; then
 	source sh/wm/i3.sh
-elif [[ $WM == 'openbox' ]]; then
+elif [[ "$WM" == "openbox" ]]; then
 	source sh/wm/openbox.sh
 fi;
 
@@ -42,7 +51,7 @@ source sh/packages/oracle_service_bus.sh
 source sh/packages/postman.sh
 source sh/packages/redis.sh
 source sh/packages/soapui.sh
-source sh/packages/sqlddeveloper.sh
+source sh/packages/sqldeveloper.sh
 source sh/packages/sublime.sh
 source sh/packages/tomcat.sh
 source sh/packages/vim.sh
