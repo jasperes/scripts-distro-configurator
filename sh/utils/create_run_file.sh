@@ -1,12 +1,21 @@
 #!/bin/bash
 
 function create_run() {
-    touch $1/run.sh
+    path_from=$1
+    to_run=$2
+    run_name=$3
 
-    echo "#\!/bin/bash" >> $1/run.sh
-    echo cd $1 >> $1/run.sh
-    echo $2 >> $1/run.sh
+    verbose && verbose "Creating run file from ${path_from} to /usr/local/bin/${run_name} running ${to_run}"
 
-    chmod +x $1/run.sh
-    sudo link $1/run.sh /usr/local/bin/$3
+    touch "${path_from}/run.sh"
+
+    { echo "#\!/bin/bash";
+      echo cd "${path_from}";
+      echo "${to_run}";
+    } >> "${path_from}/run.sh"
+
+    chmod +x "${path_from}/run.sh"
+    sudo link "${path_from}/run.sh" "/usr/local/bin/${run_name}"
+
+    verose && verbose "Run File created!"
 }
